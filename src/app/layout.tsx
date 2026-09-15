@@ -1,35 +1,38 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
+import { DM_Sans, Manrope } from "next/font/google";
+import { MotionConfig } from "framer-motion";
 import "./globals.css";
 
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
+const dmSans = DM_Sans({
+  variable: "--font-dmsans",
   subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600", "700", "800"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "İyibiriz | Yeni Nesil İnsan Kaynakları ve Markalaşma",
+  title: "İyibiriz — New Generation HR",
   description:
-    "İyibiriz — doğru yetenek seçimi, işe alım, eğitim ve işveren markası konumlandırmasında stratejik İK ve marka danışmanlığı.",
+    "Büyüyen şirketler için AI destekli yetenek, işe alım, yetkinlik, performans ve organizasyon mimarisi.",
   keywords: [
     "insan kaynakları",
-    "marka danışmanlığı",
-    "işveren markası",
-    "kariyer koçluğu",
+    "executive search",
+    "işe alım",
+    "organizasyon tasarımı",
+    "Agent4HR",
     "İyibiriz",
   ],
   openGraph: {
-    title: "İyibiriz | İnsan Kaynakları ve Markalaşma",
+    title: "İyibiriz — New Generation HR",
     description:
-      "Yeni nesil insan kaynakları ve markalaşma çözümleri — Burcu Şen.",
+      "Şirketler, kariyerini büyüten yetenekler ve işe alımın geleceği için üç uzmanlık alanını tek ekosistemde birleştiriyoruz.",
     locale: "tr_TR",
     type: "website",
   },
@@ -41,8 +44,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr" className={`${jakarta.variable} ${cormorant.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="tr" className={`${dmSans.variable} ${manrope.variable}`}>
+      <body>
+        <MotionConfig reducedMotion="user">{children}</MotionConfig>
+      </body>
     </html>
   );
 }

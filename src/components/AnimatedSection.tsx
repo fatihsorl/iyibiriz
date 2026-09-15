@@ -3,7 +3,7 @@
 import { motion, useInView, Variants } from "framer-motion";
 import { useRef, type ReactNode } from "react";
 
-const fadeUp: Variants = {
+export const fadeUp: Variants = {
   hidden: { opacity: 0, y: 16 },
   visible: {
     opacity: 1,
