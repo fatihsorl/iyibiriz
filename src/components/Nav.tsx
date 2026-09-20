@@ -2,7 +2,6 @@
 
 import { navLinks, siteConfig } from "@/lib/content";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -25,8 +24,13 @@ export function Nav() {
   return (
     <header className="site-nav">
       <Link href="/" className="brand-lockup" aria-label="İyibiriz ana sayfa">
-        <Image src={siteConfig.assets.mark} alt="İyibiriz" width={182} height={145} className="mark" priority />
-        <small className="tagline">{siteConfig.tagline}</small>
+        <span className="mark" aria-hidden="true" />
+        <span>
+          <span className="wordmark">
+            <b>İYİ</b>BİRİZ
+          </span>
+          <small className="tagline">{siteConfig.tagline}</small>
+        </span>
       </Link>
 
       <button

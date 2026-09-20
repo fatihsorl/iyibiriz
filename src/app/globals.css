@@ -74,10 +74,24 @@ a {
 }
 
 .brand-lockup .mark {
-  height: 46px;
-  width: auto;
+  width: 44px;
+  height: 44px;
   flex: none;
   display: block;
+  border-radius: 50%;
+  background-image: url("/iyibiriz-logo.jpg");
+  background-size: 78px 62px;
+  background-position: -14px -2px;
+  background-repeat: no-repeat;
+}
+
+.brand-lockup .wordmark {
+  font: 800 1.35rem/1 var(--font-manrope), "Manrope", sans-serif;
+  letter-spacing: 0.06em;
+}
+
+.brand-lockup .wordmark b {
+  color: var(--gold);
 }
 
 .brand-lockup .tagline {
@@ -95,13 +109,16 @@ a {
 }
 
 .site-nav nav a {
-  position: relative;
   color: #c3ccda;
-  padding-bottom: 4px;
   transition: color 0.2s ease;
 }
 
-.site-nav nav a::after {
+.site-nav nav a:not(.nav-cta) {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.site-nav nav a:not(.nav-cta)::after {
   content: "";
   position: absolute;
   left: 0;
@@ -119,8 +136,8 @@ a {
   color: white;
 }
 
-.site-nav nav a:hover::after,
-.site-nav nav a.active::after {
+.site-nav nav a:not(.nav-cta):hover::after,
+.site-nav nav a:not(.nav-cta).active::after {
   transform: scaleX(1);
 }
 
@@ -128,6 +145,13 @@ a {
   border: 1px solid #ffffff4d;
   padding: 0.8rem 1.05rem;
   color: white !important;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-cta:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy) !important;
 }
 
 .menu-btn {
@@ -1017,6 +1041,10 @@ a {
   align-items: center;
   font-size: 0.8rem;
   gap: 1rem;
+}
+
+.site-footer .brand-lockup .wordmark {
+  color: white;
 }
 
 .site-footer a:hover {

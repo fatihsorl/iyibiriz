@@ -1,13 +1,17 @@
 import { siteConfig } from "@/lib/content";
 import Link from "next/link";
-import Image from "next/image";
 
 export function SiteFooter() {
   return (
     <footer className="site-footer">
       <Link href="/" className="brand-lockup" aria-label="İyibiriz ana sayfa">
-        <Image src={siteConfig.assets.mark} alt="İyibiriz" width={182} height={145} className="mark" />
-        <small className="tagline">{siteConfig.tagline}</small>
+        <span className="mark" aria-hidden="true" />
+        <span>
+          <span className="wordmark">
+            <b>İYİ</b>BİRİZ
+          </span>
+          <small className="tagline">{siteConfig.tagline}</small>
+        </span>
       </Link>
       <p>{siteConfig.address}</p>
       <p>
