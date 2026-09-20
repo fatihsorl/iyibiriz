@@ -7,7 +7,7 @@ import { Statement } from "@/components/home/Statement";
 import { CorporateSolutions } from "@/components/home/CorporateSolutions";
 import { Method } from "@/components/home/Method";
 import { TalentPaths } from "@/components/home/TalentPaths";
-import { Agent4HRSection } from "@/components/home/Agent4HRSection";
+import { AiSolutionSection } from "@/components/home/AiSolutionSection";
 import { Executives } from "@/components/home/Executives";
 import { Founder } from "@/components/home/Founder";
 import { CtaBand } from "@/components/home/CtaBand";
@@ -24,7 +24,7 @@ export default function Home() {
         <CorporateSolutions />
         <Method />
         <TalentPaths />
-        <Agent4HRSection />
+        <AiSolutionSection />
         <Executives />
         <Founder />
         <CtaBand />

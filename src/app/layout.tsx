@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "executive search",
     "işe alım",
     "organizasyon tasarımı",
-    "Agent4HR",
+    "yapay zeka",
     "İyibiriz",
   ],
   openGraph: {

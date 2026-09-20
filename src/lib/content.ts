@@ -13,7 +13,7 @@ export const siteConfig = {
 export const navLinks = [
   { href: "/sirketler", label: "Şirketler" },
   { href: "/adaylar", label: "Adaylar" },
-  { href: "/agent4hr", label: "Agent4HR" },
+  { href: "/yapay-zeka", label: "Yapay Zeka" },
   { href: "/#kurucu", label: "Burcu Şen" },
 ] as const;
 
@@ -57,10 +57,10 @@ export const focus = {
     {
       no: "03",
       kicker: "AI İŞE ALIM SİSTEMİ",
-      title: ["Agent4HR"],
+      title: ["İnsan Kaynakları için", "Yapay Zeka"],
       items: ["AI destekli işe alım", "Talent intelligence", "İnsan denetimli kararlar", "Ölçeklenebilir süreç"],
-      cta: "Agent4HR'ı keşfet ↘",
-      href: "/agent4hr",
+      cta: "Yapay zekâ çözümünü keşfet ↘",
+      href: "/yapay-zeka",
       tone: "navy" as const,
     },
   ],
@@ -162,14 +162,14 @@ export const talentPaths = {
   note: "İyibiriz, iş garantisi vaat etmez; adayın değerini doğru ifade etmesini, doğru fırsatlara hazırlanmasını ve uygun olduğunda seçili yetenek ağına dahil olmasını sağlar.",
 };
 
-export const agent4hr = {
+export const aiSolution = {
   eyebrow: "03 · AI işe alım sistemi",
   title: "İşe alımın",
   titleEm: "akıllı çalışma katmanı.",
-  body: "Agent4HR, İyibiriz'in insan ve işe alım uzmanlığını yapay zekâ ile birleştiren AI destekli işe alım sistemidir. Ekiplerin daha hızlı, tutarlı ve izlenebilir yetenek kararları almasına yardımcı olur.",
+  body: "İyibiriz, işe alım ve İK süreçlerinize yapay zekâ desteği kazandırır; doğru teknoloji ortaklarıyla çalışarak daha hızlı, tutarlı ve izlenebilir yetenek kararları almanıza yardımcı olur.",
   points: ["İnsan kararını güçlendiren AI", "Tekrarlanabilir işe alım akışı", "Aday deneyimi ve şeffaflık", "Talent intelligence altyapısı"],
-  cta: "agent4hr.com'u ziyaret et ↗",
-  href: "https://agent4hr.com",
+  cta: "Yapay zekâ çözümü için bize ulaşın ↗",
+  href: "/yapay-zeka#talep",
 };
 
 export const executives = {
@@ -275,15 +275,15 @@ export const talentIndexPage = {
   ],
 };
 
-export const agent4hrPage = {
-  kicker: "AI RECRUITMENT SYSTEM",
+export const aiSolutionPage = {
+  kicker: "YAPAY ZEKÂ DESTEKLİ İK",
   title: "İnsan uzmanlığı,",
-  titleEm: "AI zekâsıyla ölçeklenir.",
-  lead: "Agent4HR, işe alım ekiplerinin daha hızlı, tutarlı ve izlenebilir yetenek kararları almasına yardımcı olan AI destekli çalışma katmanıdır.",
-  sectionKicker: "AGENT4HR",
-  title2: "İşe alımın akıllı çalışma sistemi.",
+  titleEm: "yapay zekâyla ölçeklenir.",
+  lead: "İşe alım ve İK süreçlerinizde daha hızlı, tutarlı ve izlenebilir yetenek kararları almanız için yapay zekâ destekli çözümler sunuyoruz.",
+  sectionKicker: "İNSAN KAYNAKLARI İÇİN YAPAY ZEKA",
+  title2: "İşe alımın akıllı çalışma katmanı.",
   intro:
-    "İyibiriz'in işe alım uzmanlığından doğan Agent4HR; tekrar eden adımları sadeleştirirken nihai kararı insanda tutar. Amacı otomatik eleme değil, daha nitelikli ve şeffaf değerlendirmedir.",
+    "İyibiriz'in işe alım uzmanlığını doğru teknoloji ortaklarıyla birleştiriyoruz; tekrar eden adımları sadeleştirirken nihai kararı her zaman insanda tutuyoruz. Amacımız otomatik eleme değil, daha nitelikli ve şeffaf değerlendirmedir.",
   modules: [
     { no: "01", title: "AI Destekli İş Akışı", body: "Rol ihtiyacından aday değerlendirmeye kadar tutarlı ve tekrarlanabilir süreç." },
     { no: "02", title: "Talent Intelligence", body: "Aday ve pazar verisini karar vermeyi kolaylaştıran içgörülere dönüştürme yaklaşımı." },
@@ -291,12 +291,12 @@ export const agent4hrPage = {
     { no: "04", title: "Ölçeklenebilir Yapı", body: "Büyüyen ekiplerin aynı kalite standardını daha fazla rolde sürdürebilmesi." },
   ],
   form: {
-    kicker: "ERKEN İLGİ",
-    title: "Agent4HR gelişmelerini takip edin.",
-    body: "Ürün tanıtımı ve erken erişim görüşmesi için ekibimizle bağlantı kurun.",
-    link: { label: "agent4hr.com ↗", href: "https://agent4hr.com" },
-    subject: "Agent4HR Erken İlgi Talebi",
-    button: "Agent4HR görüşmesi iste ↗",
+    id: "talep",
+    kicker: "İLETİŞİME GEÇİN",
+    title: "Yapay zekâ destekli işe alım ihtiyacınızı konuşalım.",
+    body: "İhtiyacınıza uygun çözümü birlikte değerlendirelim; doğru teknoloji ortağıyla sizi buluşturalım.",
+    subject: "Yapay Zekâ Çözümü Talebi",
+    button: "Görüşme talebi gönder ↗",
     fields: [
       { name: "Ad Soyad", type: "text" as const, required: true },
       { name: "Şirket / Unvan", type: "text" as const, required: true },

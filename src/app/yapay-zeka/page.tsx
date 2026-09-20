@@ -4,25 +4,25 @@ import { InnerHero } from "@/components/inner/InnerHero";
 import { IntroGrid } from "@/components/inner/IntroGrid";
 import { ModulesGrid } from "@/components/inner/ModulesGrid";
 import { RequestSection } from "@/components/inner/RequestSection";
-import { agent4hrPage } from "@/lib/content";
+import { aiSolutionPage } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Agent4HR | İyibiriz",
+  title: "İnsan Kaynakları için Yapay Zeka | İyibiriz",
 };
 
-export default function Agent4HRPage() {
+export default function AiSolutionPage() {
   return (
     <InnerPageLayout>
       <InnerHero
-        kicker={agent4hrPage.kicker}
-        title={agent4hrPage.title}
-        titleEm={agent4hrPage.titleEm}
-        lead={agent4hrPage.lead}
+        kicker={aiSolutionPage.kicker}
+        title={aiSolutionPage.title}
+        titleEm={aiSolutionPage.titleEm}
+        lead={aiSolutionPage.lead}
       />
       <section className="page-body">
-        <IntroGrid kicker={agent4hrPage.sectionKicker} title={[agent4hrPage.title2]} intro={agent4hrPage.intro} />
-        <ModulesGrid modules={agent4hrPage.modules} />
-        <RequestSection {...agent4hrPage.form} />
+        <IntroGrid kicker={aiSolutionPage.sectionKicker} title={[aiSolutionPage.title2]} intro={aiSolutionPage.intro} />
+        <ModulesGrid modules={aiSolutionPage.modules} />
+        <RequestSection {...aiSolutionPage.form} />
       </section>
     </InnerPageLayout>
   );

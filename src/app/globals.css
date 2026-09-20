@@ -818,6 +818,10 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 0.3ch;
+  text-align: center;
+  padding: 12%;
   font: 500 clamp(2.2rem, 4vw, 4.8rem) var(--font-manrope), "Manrope", sans-serif;
   letter-spacing: -0.06em;
   position: relative;
