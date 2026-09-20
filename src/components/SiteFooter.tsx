@@ -6,15 +6,8 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <Link href="/" className="brand-lockup" aria-label="İyibiriz ana sayfa">
-        <span className="mark">
-          <Image src={siteConfig.assets.mark} alt="" width={64} height={64} />
-        </span>
-        <span>
-          <span className="wordmark">
-            <b>İYİ</b>BİRİZ
-          </span>
-          <small className="tagline">{siteConfig.tagline}</small>
-        </span>
+        <Image src={siteConfig.assets.mark} alt="İyibiriz" width={182} height={145} className="mark" />
+        <small className="tagline">{siteConfig.tagline}</small>
       </Link>
       <p>{siteConfig.address}</p>
       <p>

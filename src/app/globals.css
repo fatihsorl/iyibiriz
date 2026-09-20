@@ -23,10 +23,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   color: var(--ink);
@@ -74,31 +70,14 @@ a {
 .brand-lockup {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.75rem;
 }
 
 .brand-lockup .mark {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  overflow: hidden;
+  height: 46px;
+  width: auto;
   flex: none;
   display: block;
-}
-
-.brand-lockup .mark img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.brand-lockup .wordmark {
-  font: 800 1.35rem/1 var(--font-manrope), "Manrope", sans-serif;
-  letter-spacing: 0.06em;
-}
-
-.brand-lockup .wordmark b {
-  color: var(--gold);
 }
 
 .brand-lockup .tagline {
@@ -116,13 +95,33 @@ a {
 }
 
 .site-nav nav a {
+  position: relative;
   color: #c3ccda;
+  padding-bottom: 4px;
   transition: color 0.2s ease;
+}
+
+.site-nav nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
 }
 
 .site-nav nav a:hover,
 .site-nav nav a.active {
   color: white;
+}
+
+.site-nav nav a:hover::after,
+.site-nav nav a.active::after {
+  transform: scaleX(1);
 }
 
 .nav-cta {
@@ -1020,10 +1019,6 @@ a {
   gap: 1rem;
 }
 
-.site-footer .brand-lockup .wordmark {
-  color: white;
-}
-
 .site-footer a:hover {
   color: white;
 }
@@ -1163,12 +1158,14 @@ a {
 
 .mail-form {
   display: grid;
-  gap: 0.8rem;
+  gap: 1.1rem;
 }
 
 .mail-form label {
-  font-size: 0.78rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   display: block;
 }
 
@@ -1176,11 +1173,37 @@ a {
 .mail-form select,
 .mail-form textarea {
   width: 100%;
-  padding: 1rem;
-  border: 1px solid #07172f55;
+  padding: 0.95rem 1rem;
+  border: 1px solid transparent;
   background: #fff;
   font: inherit;
-  margin-top: 0.4rem;
+  color: var(--ink);
+  margin-top: 0.55rem;
+  box-shadow: 0 1px 2px #07172f1a;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.mail-form select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--navy) 50%), linear-gradient(135deg, var(--navy) 50%, transparent 50%);
+  background-position: calc(100% - 1.3rem) center, calc(100% - 1rem) center;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.mail-form input:hover,
+.mail-form select:hover,
+.mail-form textarea:hover {
+  box-shadow: 0 2px 6px #07172f22;
+}
+
+.mail-form input:focus,
+.mail-form select:focus,
+.mail-form textarea:focus {
+  outline: none;
+  border-color: var(--navy);
+  box-shadow: 0 2px 12px #07172f2e;
 }
 
 .mail-form textarea {
@@ -1195,6 +1218,15 @@ a {
   padding: 1.1rem;
   font: 600 0.95rem var(--font-dmsans), "DM Sans", sans-serif;
   cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.mail-form button:hover {
+  background: var(--blue);
+}
+
+.mail-form button:active {
+  transform: translateY(1px);
 }
 
 .mail-note {

@@ -25,15 +25,8 @@ export function Nav() {
   return (
     <header className="site-nav">
       <Link href="/" className="brand-lockup" aria-label="İyibiriz ana sayfa">
-        <span className="mark">
-          <Image src={siteConfig.assets.mark} alt="" width={64} height={64} priority />
-        </span>
-        <span>
-          <span className="wordmark">
-            <b>İYİ</b>BİRİZ
-          </span>
-          <small className="tagline">{siteConfig.tagline}</small>
-        </span>
+        <Image src={siteConfig.assets.mark} alt="İyibiriz" width={182} height={145} className="mark" priority />
+        <small className="tagline">{siteConfig.tagline}</small>
       </Link>
 
       <button
