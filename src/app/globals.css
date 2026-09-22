@@ -526,15 +526,22 @@ a {
   list-style: none;
   padding: 0;
   margin: 0;
-  line-height: 2;
   border-top: 1px solid currentColor;
   opacity: 0.72;
 }
 
+.focus-card ul li {
+  line-height: 1.3;
+  padding: 0.5rem 0;
+}
+
 .focus-card b {
-  font-size: 0.86rem;
+  font-size: 0.95rem;
   margin-top: auto;
   font-weight: 700;
+  align-self: flex-start;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid currentColor;
 }
 
 @media (max-width: 850px) {
@@ -546,6 +553,10 @@ a {
   }
   .focus-card {
     min-height: 430px;
+  }
+  .focus-card b {
+    font-size: 1.05rem;
+    padding-bottom: 0.4rem;
   }
 }
 

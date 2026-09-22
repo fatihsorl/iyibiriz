@@ -6,7 +6,7 @@ export const siteConfig = {
   copyright: "© 2026 İyibiriz",
   assets: {
     mark: "/iyibiriz-logo.jpg",
-    founder: "/iyibiriz-burcu.avif",
+    founder: "/iyibiriz-burcu.jpg",
   },
 };
 
@@ -40,7 +40,7 @@ export const focus = {
       no: "01",
       kicker: "ŞİRKETLER İÇİN",
       title: ["Talent & Organization", "Architecture"],
-      items: ["İşe alım", "Yetkinlik ve performans", "İK dijitalleşmesi", "AI entegrasyonu"],
+      items: ["İşe alım danışmanlığı", "Yetkinlik ve performans", "İK dijitalleşmesi", "AI entegrasyonu"],
       cta: "Kurumsal çözümleri keşfet ↘",
       href: "/sirketler",
       tone: "ice" as const,
